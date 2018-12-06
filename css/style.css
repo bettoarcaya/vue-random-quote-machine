@@ -11,4 +11,20 @@ body{
     padding:40px 50px;
     display:table;
     background-color:#fff;
-  }
+}
+.text {
+    text-align:center;
+    width:450px;
+    height:auto;
+    clear:both;
+    font-weight:500;
+    font-size:1.75em;
+}
+.author {
+    width:450px;
+    height:auto;
+    clear:both;
+    padding-top:20px;
+    font-size:1em; 
+    text-align:right;
+}

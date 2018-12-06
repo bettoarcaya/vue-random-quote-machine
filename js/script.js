@@ -19,7 +19,8 @@ new Vue({
                 this.quotes = response.data.quotes;
                 this.currentQuote = this.quotes[0].quote;
                 this.quoteAuthor = this.quotes[0].author;
-                console.log(this.quotes, this.currentQuote, this.quoteAuthor);
+                
+                //console.log(this.quotes, this.currentQuote, this.quoteAuthor);
             });
         },
         nextQuote: function(){
