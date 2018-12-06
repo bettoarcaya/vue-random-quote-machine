@@ -8,6 +8,8 @@ new Vue({
     data:{
         title: 'Vue-Random Quote Machine',
         quotes: [],
+        counter: 0,
+        flag: false,
         currentQuote: '',
         quoteAuthor: '',
     },
@@ -17,14 +19,21 @@ new Vue({
             
             axios.get(url).then( response => {
                 this.quotes = response.data.quotes;
-                this.currentQuote = this.quotes[0].quote;
-                this.quoteAuthor = this.quotes[0].author;
+                this.currentQuote = this.quotes[this.counter].quote;
+                this.quoteAuthor = this.quotes[this.counter].author;
                 
                 //console.log(this.quotes, this.currentQuote, this.quoteAuthor);
             });
         },
         nextQuote: function(){
-
+            this.counter++;
+            this.currentQuote = this.quotes[this.counter].quote;
+            this.quoteAuthor = this.quotes[this.counter].author;
+        },
+        previusQuote: function(){
+            this.counter--;
+            this.currentQuote = this.quotes[this.counter].quote;
+            this.quoteAuthor = this.quotes[this.counter].author;
         }
     }
 });
