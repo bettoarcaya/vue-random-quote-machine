@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
     <div id="main">
@@ -15,19 +16,19 @@
             <div class="text-center">
                 <h1> {{ title }} </h1>
             </div>
-            <div class="quot-content">
-                <div class="text">
+            <div id="quote-box" class="quot-content">
+                <div id="text" class="text">
                     <i class="fa fa-quote-left"> </i> <span>{{ currentQuote }}</span>
                 </div>
-                <div class="author">
+                <div id="author" class="author">
                     - <span>{{ quoteAuthor }}</span>
                 </div>
                 <div class="buttons">
-                    <a class="btn btn-info" id="tweet-quote" title="Tweet this quote!" target="_blank">
+                    <a href="twitter.com/intent/tweet" class="btn btn-info" id="tweet-quote" title="Tweet this quote!" target="_blank">
                         <i class="fab fa-twitter" aria-hidden="true"><span></span> </i>
                     </a>
-                    <button class="btn btn-primary" id="new" title="Next quote!" v-on:click="nextQuote()"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                    <button v-if="counter != 0" class="btn btn-primary" id="previus" title="Previus quote!" v-on:click="previusQuote()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                    <button id="new-quote" class="btn btn-primary" id="new" title="Next quote!" v-on:click="nextQuote()"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="previus-quote" class="btn btn-primary" id="previus" title="Previus quote!" v-on:click="previusQuote()" v-if="counter != 0" ><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
