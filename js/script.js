@@ -1,0 +1,5 @@
+
+
+function clk(){
+    alert("hola");
+}
