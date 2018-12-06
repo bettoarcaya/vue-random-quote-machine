@@ -1,0 +1,14 @@
+body{
+    background: red;
+}
+.quot-content {
+    border-radius:3px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position:relative;
+    margin:8% auto auto auto;
+    width:450px;
+    padding:40px 50px;
+    display:table;
+    background-color:#fff;
+  }
